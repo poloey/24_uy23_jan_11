@@ -3,6 +3,11 @@
 $con = mysqli_connect('localhost', 'root', '', 'fgc');
 $teachers = $con->query('select * from teacher');
 
+while($teacher = $teachers->fetch_object()) {
+  echo $teacher->name . "\n";
+}
+
+die;
 
 ?>
 <!DOCTYPE html>
